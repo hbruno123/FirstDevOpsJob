@@ -24,8 +24,7 @@ steps:
     backendServiceAWS: 'aws-terraform-junio'
     backendAWSBucketName: 'terraform-backend-aforo255-hbc'
     backendAWSKey: 'arn:aws:s3:::terraform-backend-aforo255-hbc'
-    backendServiceAWS: 'aws-terraform-junio'
- 
+    
 
 
 
