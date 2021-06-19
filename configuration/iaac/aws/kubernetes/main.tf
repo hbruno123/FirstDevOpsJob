@@ -35,7 +35,7 @@ module "aforo255-cluster3" {
   cluster_version = "1.17"
   subnets         = ["subnet-2f1be252", "subnet-559fbe19"]  #CHANGE # Donot choose subnet from us-east-1e
   #subnets = data.aws_subnet_ids.subnets.ids
-  vpc_id          = aws_default_vpc.default.id
+  vpc_id          = "vpc-06e77c6d"
   #vpc_id         = "vpc-1234556abcdef"
 
   node_groups = [
@@ -78,7 +78,7 @@ resource "kubernetes_cluster_role_binding" "example" {
 
 # Needed to set the default region
 provider "aws" {
-  region  = "us-east-1"
+  region  = "us-east-2"
 }
 
 resource "aws_iam_role" "test_role_dev" {
