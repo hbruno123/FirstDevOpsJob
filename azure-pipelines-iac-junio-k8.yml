@@ -24,6 +24,12 @@ steps:
     backendServiceAWS: 'aws-terraform-junio'
     backendAWSBucketName: 'terraform-backend-aforo255-hbc'
     backendAWSKey: 'arn:aws:s3:::terraform-backend-aforo255-hbc'
+- task: TerraformTaskV1@0
+  inputs:
+    provider: 'aws'
+    command: 'apply'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/aws/kubernetes'
+    environmentServiceNameAWS: 'TerraformAWS'     
     
 
 
